@@ -17,10 +17,15 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
   src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
 </script>
 <script type="text/babel">
-function App(){
-    return <span id='app-id' className='app-class'>My App</span>
+function App(props){
+    console.log(props)
+    return <header>{props.children}</header>
 }
-  ReactDOM.render(<App /> , document.querySelector("#application-root"));
+
+  ReactDOM.render(
+    <App className='my-class'>
+        <div><span><h1>Current Page Title!</h1></span></div>
+  </App> , document.querySelector("#application-root"));
 </script>
 </body>
 </html>
