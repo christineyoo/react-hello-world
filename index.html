@@ -18,17 +18,7 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
 </script>
 <script type="text/babel">
 function App(){
-    return (
-        <div>
-            <h1>Hello, everyone!</h1>   
-            <p>We think</p>
-            <ul>
-                <li>React</li> 
-                <li>is</li> 
-                <li>brilliant!</li> 
-            </ul>
-        </div>
-    )
+    return <span id='app-id' className='app-class'>My App</span>
 }
   ReactDOM.render(<App /> , document.querySelector("#application-root"));
 </script>
