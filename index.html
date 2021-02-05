@@ -22,7 +22,7 @@ function App(props){
         <div>
         <header>
             <h1 className="title">About {props.name}</h1>
-            <div id='img'></div>
+            <div id='img'><img src={props.image} alt="A picture of Sally"/></div>
         </header>
         <main>
             <section id="introduction">
@@ -62,7 +62,7 @@ function App(props){
 }
 
   ReactDOM.render(
-    <App name="Sally" /> , document.querySelector("#app-root"));
+    <App name="Sally" image="./images/sally.jpg" /> , document.querySelector("#app-root"));
 </script>
 </body>
 </html>
