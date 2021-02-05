@@ -17,11 +17,11 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
   src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
 </script>
 <script type="text/babel">
-function App(){
+function App(props){
     return(
         <div>
         <header>
-            <h1 className="title">About me</h1>
+            <h1 className="title">About {props.name}</h1>
             <div id='img'></div>
         </header>
         <main>
@@ -62,7 +62,7 @@ function App(){
 }
 
   ReactDOM.render(
-    <App /> , document.querySelector("#app-root"));
+    <App name="Sally" /> , document.querySelector("#app-root"));
 </script>
 </body>
 </html>
